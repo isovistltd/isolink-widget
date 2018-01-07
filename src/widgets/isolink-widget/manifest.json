@@ -1,0 +1,46 @@
+{
+  "name": "isolink-widget",
+  "label": "IsoLink",
+  "platform": "HTML",
+  "version": "2.1.0",
+  "wabVersion": "2.5",
+  "2D": true,
+  "3D": false,
+  "author": "Isovist",
+  "description": "IsoLink integration with third party systems.",
+  "copyright": "Isovist NZ Ltd.",
+  "license": "",
+  "featureActions": [
+    {
+      "name": "SendToTRIM",
+      "uri": "featureActions/featureActionTRIM"
+    },
+    {
+      "name": "SendToPathway",
+      "uri": "featureActions/featureActionPathway"
+    },
+    {
+      "name": "SendToPropertyCI",
+      "uri": "featureActions/featureActionPropertyCI"
+    },
+    {
+      "name": "SendToHansen",
+      "uri": "featureActions/featureActionHansen"
+    },
+    {
+      "name": "SendToWorksAssets",
+      "uri": "featureActions/featureActionWorksAssets"
+    }
+  ],
+  "properties": {
+    "inPanel": false,
+    "hasLocale": true,
+    "hasStyle": false,
+    "hasConfig": true,
+    "hasUIFile": false,
+    "hasSettingPage": false,
+    "hasSettingUIFile": false,
+    "hasSettingLocale": false,
+    "hasSettingStyle": false
+  }
+}

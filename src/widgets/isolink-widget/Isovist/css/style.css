@@ -1,0 +1,35 @@
+﻿.jimu-popup .title-label {
+  color: black;
+}
+
+.isolink-link {
+  padding-bottom: 0px !important;
+}
+
+.isolink-icon {
+  height: 16px;
+  width: 16px;
+  background-image: url('../images/hp-trim-logo.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.glyphicon-trim {
+  background-image: url('../images/hp-trim-logo.png');
+  padding-bottom: 0px !important;
+}
+
+.glyphicon-tech-one {
+  background-image: url('../images/techone-logo.png');
+  padding-bottom: 0px !important;
+}
+
+.glyphicon-hansen {
+  background-image: url('../images/hansen-logo.png');
+  padding-bottom: 0px !important;
+}
+
+.glyphicon-pathway {
+  background-image: url('../images/pathway-logo.png');
+  padding-bottom: 0px !important;
+}
