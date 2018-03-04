@@ -89,11 +89,21 @@ define(
       layerSupported: function(layerUrl, integrationName) {
         var layer = '';
         if (layerUrl.url) {
+
+          if (layerUrl.url.endsWith('/dynamicLayer')) {
+            return false;
+          }
+
           layer = layerUrl.url.substring(
             layerUrl.url.lastIndexOf('services/') + 9,
             layerUrl.url.length
           );
         } else {
+
+          if (layerUrl.endsWith('/dynamicLayer')) {
+            return false;
+          }
+
           layer = layerUrl.substring(layerUrl.lastIndexOf('services/') + 9, layerUrl.length);
         }
 
