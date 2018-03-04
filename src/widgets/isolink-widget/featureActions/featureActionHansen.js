@@ -7,7 +7,12 @@
       integrationName: 'Hansen',
 
       isFeatureSupported: function(featureSet) {
-        var url = featureSet.features[0]._layer.url;
+        var feature = featureSet.features[0];
+        var url = feature._layer.url;
+
+        if (feature._layer && feature._layer.source && feature._layer.source && feature._layer.source.mapLayerId > -1) {
+          url = url.replace('//dynamicLayer', '/' + feature._layer.source.mapLayerId);
+        }
 
         //GET THE CURRENT ISOLINK UTILS OBJECT
         var isolinkWidget = WidgetManager.getInstance().getWidgetById(this.widgetId);
@@ -18,7 +23,12 @@
       onExecute: function(featureSet) {
         var isolinkWidget = WidgetManager.getInstance().getWidgetById(this.widgetId);
 
-        var url = featureSet.features[0]._layer.url;
+        var feature = featureSet.features[0];
+        var url = feature._layer.url;
+
+        if (feature._layer && feature._layer.source && feature._layer.source && feature._layer.source.mapLayerId > -1) {
+          url = url.replace('//dynamicLayer', '/' + feature._layer.source.mapLayerId);
+        }
         var oids = [];
         featureSet.features.forEach(function(feature) {
           var idField = isolinkWidget.isolinkUtils.hasOwnPropertyCaseInsensitive(
